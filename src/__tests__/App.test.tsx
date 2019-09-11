@@ -15,4 +15,7 @@ describe("The Dungeon Tile Builder app", () => {
   it("should match the snapshot", () => {
     expect(Dungeon).toMatchSnapshot();
   });
+  it("should have a Tile component", () => {
+    expect(Dungeon.exists("Tile")).toBeTruthy();
+  });
 });
