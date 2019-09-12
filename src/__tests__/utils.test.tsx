@@ -2,7 +2,7 @@ import { createCoords } from '../utils';
 
 describe('The createCoords function', () => {
   const numOfCoords = 5;
-  let coords: [];
+  let coords: number[];
   beforeEach(() => {
     coords = createCoords(numOfCoords);
   });
