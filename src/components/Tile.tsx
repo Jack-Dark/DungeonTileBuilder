@@ -1,15 +1,17 @@
 import React from "react";
+import GridSquare from "../components/GridSquare";
+import GridHex from "../components/GridHex";
 
 export interface TileProps {
-  value: number;
-  label: string;
+  grid: string;
+  content: string;
 }
 
 export default class Tile extends React.PureComponent<TileProps> {
   render(): React.ReactNode {
     return (
       <div>
-        The value of {this.props.label} is {this.props.value}
+        {/square/i.test(this.props.grid) ? <GridSquare /> : <GridHex />}
       </div>
     );
   }

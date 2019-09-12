@@ -2,7 +2,7 @@
 
 exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
 <Tile
-  label="foo"
-  value={1}
+  content="wall"
+  grid="square"
 />
 `;
