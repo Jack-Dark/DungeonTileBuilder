@@ -1,10 +1,16 @@
-import React from "react";
+import React from 'react';
 // import logo from "./logo.svg";
-import Tile from "./components/Tile";
-import "./css/App.css";
+import Grid from './components/Grid';
+import './css/App.css';
 
-const App: React.FC = () => {
-  return <Tile grid="square" content="wall" />;
-};
-
-export default App;
+export default class App extends React.PureComponent {
+  state = {
+    size: {
+      x: 7,
+      y: 5
+    }
+  };
+  render(): React.ReactNode {
+    return <Grid type="square" size={this.state.size} />;
+  }
+}
