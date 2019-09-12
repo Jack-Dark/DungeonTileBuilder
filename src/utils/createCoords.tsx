@@ -1,4 +1,4 @@
-export const createCoords = (qty: number) => {
+export const createCoords = (qty: number, reverse?: boolean) => {
   const largeHalf = Math.ceil(qty / 2);
   const smallHalf = qty - largeHalf;
   const coordinates = [];
@@ -8,5 +8,5 @@ export const createCoords = (qty: number) => {
   for (let index = 1; index <= smallHalf; index++) {
     coordinates.push(-Math.abs(index));
   }
-  return coordinates.sort((a, b) => a > b);
+  return coordinates.sort((a, b) => (reverse ? a + b : a - b));
 };

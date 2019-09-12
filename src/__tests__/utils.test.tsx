@@ -30,4 +30,12 @@ describe('The createCoords function', () => {
       expect(coords[firstIndex] + coords[lastIndex]).toBe(0);
     });
   });
+  describe('when the "reverse" argument is true', () => {
+    beforeEach(() => {
+      coords = createCoords(numOfCoords, true);
+    });
+    it('should reverse the order of the array values', () => {
+      expect(coords).toEqual([3, 2, 1, -1, -2]);
+    });
+  });
 });
