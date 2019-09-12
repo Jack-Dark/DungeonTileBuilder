@@ -4,7 +4,7 @@ import Tile from "./components/Tile";
 import "./css/App.css";
 
 const App: React.FC = () => {
-  return <Tile label="foo" value={1} />;
+  return <Tile grid="square" content="wall" />;
 };
 
 export default App;
