@@ -3,7 +3,7 @@ import GridRow from './GridRow';
 import { createCoords } from '../utils';
 
 export interface GridProps {
-  type: string;
+  type: 'square' | 'hex';
   size: { x: number; y: number };
 }
 
