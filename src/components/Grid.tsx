@@ -14,16 +14,8 @@ export default class Grid extends React.PureComponent<GridProps> {
       x: createCoords(size.x),
       y: createCoords(size.y, true)
     };
-    const wrapperStyles = {
-      style: {
-        display: 'flex',
-        flexFlow: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }
-    };
     return (
-      <div {...wrapperStyles}>
+      <div className="flex flex-wrap items-center justify-center">
         {coordinates.y.map((y: number, index) => (
           <GridRow
             gridType={type}
