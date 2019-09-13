@@ -1,3 +1,21 @@
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.w-100 {
+  width: 100%;
+}
+.top-0 {
+  top: 0;
+}
+.right-0 {
+  right: 0;
+}
+.left-0 {
+  left: 0;
+}
 .flex {
   display: flex;
 }
@@ -9,4 +27,31 @@
 }
 .justify-center {
   justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.pa1 {
+  padding: 0.25rem;
+}
+.pa2 {
+  padding: 0.5rem;
+}
+.pa3 {
+  padding: 1rem;
+}
+.fl {
+  float: left;
+}
+.tc {
+  text-align: center;
+}
+.pointer {
+  cursor: pointer;
+}
+.visible-on-parent-hover {
+  visibility: hidden;
+}
+*:hover > .visible-on-parent-hover {
+  visibility: visible;
 }
