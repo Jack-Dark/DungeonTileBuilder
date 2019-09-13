@@ -13,9 +13,19 @@ exports[`The Tile component should match the snapshot 1`] = `
       }
     }
   >
-    <b>
-      Wall
-    </b>
+    <div
+      className="pa2 w-100"
+      style={
+        Object {
+          "backgroundColor": "gray",
+          "color": "white",
+        }
+      }
+    >
+      <b>
+        Wall
+      </b>
+    </div>
   </div>
   <Controls
     rotateClockwise={[Function]}
