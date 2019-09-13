@@ -4,7 +4,22 @@ exports[`The Tile component should match the snapshot 1`] = `
 <div
   className="relative"
 >
-  <GridHex />
-  <Controls />
+  <GridSquare />
+  <div
+    className="absolute z-1 w-100 h-100 top-0 left-0"
+    style={
+      Object {
+        "transform": "rotate(0deg)",
+      }
+    }
+  >
+    <b>
+      Wall
+    </b>
+  </div>
+  <Controls
+    rotateClockwise={[Function]}
+    rotateCounterClockwise={[Function]}
+  />
 </div>
 `;
