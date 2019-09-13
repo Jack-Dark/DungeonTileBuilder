@@ -16,14 +16,12 @@ export default class Tile extends React.PureComponent<TileProps> {
   };
   render(): React.ReactNode {
     const { degreesRotated } = this.state;
-    const rotateClockwise = () => {
-      const newDegreesRotated = rotate('clockwise', degreesRotated);
+    const rotateTile = (direction: 'clockwise' | 'counter-clockwise') => {
+      const newDegreesRotated = rotate(direction, degreesRotated);
       this.setState({ degreesRotated: newDegreesRotated });
     };
-    const rotateCounterClockwise = () => {
-      const newDegreesRotated = rotate('counter-clockwise', degreesRotated);
-      this.setState({ degreesRotated: newDegreesRotated });
-    };
+    const rotateClockwise = () => rotateTile('clockwise');
+    const rotateCounterClockwise = () => rotateTile('counter-clockwise');
     return (
       <div className="relative">
         {/square/i.test(this.props.grid) ? <GridSquare /> : <GridHex />}
