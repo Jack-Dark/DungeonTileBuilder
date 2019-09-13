@@ -1,6 +1,6 @@
 import React from 'react';
-import GridSquare from '../components/GridSquare';
-import GridHex from '../components/GridHex';
+import GridSquare from './GridSquare';
+import GridHex from './GridHex';
 import Controls from './Controls';
 
 export interface TileProps {
