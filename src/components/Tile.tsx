@@ -22,6 +22,7 @@ export default class Tile extends React.PureComponent<TileProps> {
     };
     const rotateClockwise = () => rotateTile('clockwise');
     const rotateCounterClockwise = () => rotateTile('counter-clockwise');
+    const resetTile = () => this.setState({ degreesRotated: 0 });
     return (
       <div className="relative">
         {/square/i.test(this.props.grid) ? <GridSquare /> : <GridHex />}
@@ -39,6 +40,7 @@ export default class Tile extends React.PureComponent<TileProps> {
         <Controls
           rotateClockwise={rotateClockwise}
           rotateCounterClockwise={rotateCounterClockwise}
+          resetTile={resetTile}
         />
       </div>
     );

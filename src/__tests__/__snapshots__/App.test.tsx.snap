@@ -86,6 +86,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -151,9 +152,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -209,6 +213,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -274,9 +279,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -332,6 +340,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -397,9 +406,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -455,6 +467,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -520,9 +533,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -578,6 +594,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -643,9 +660,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -701,6 +721,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -766,9 +787,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -824,6 +848,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -889,9 +914,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -968,6 +996,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -1033,9 +1062,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -1091,6 +1123,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -1156,9 +1189,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -1214,6 +1250,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -1279,9 +1316,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -1337,6 +1377,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -1402,9 +1443,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -1460,6 +1504,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -1525,9 +1570,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -1583,6 +1631,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -1648,9 +1697,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -1706,6 +1758,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -1771,9 +1824,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -1850,6 +1906,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -1915,9 +1972,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -1973,6 +2033,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -2038,9 +2099,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -2096,6 +2160,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -2161,9 +2226,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -2219,6 +2287,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -2284,9 +2353,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -2342,6 +2414,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -2407,9 +2480,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -2465,6 +2541,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -2530,9 +2607,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -2588,6 +2668,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -2653,9 +2734,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -2732,6 +2816,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -2797,9 +2882,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -2855,6 +2943,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -2920,9 +3009,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -2978,6 +3070,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -3043,9 +3136,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -3101,6 +3197,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -3166,9 +3263,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -3224,6 +3324,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -3289,9 +3390,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -3347,6 +3451,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -3412,9 +3517,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -3470,6 +3578,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -3535,9 +3644,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -3614,6 +3726,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -3679,9 +3792,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -3737,6 +3853,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -3802,9 +3919,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -3860,6 +3980,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -3925,9 +4046,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -3983,6 +4107,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -4048,9 +4173,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -4106,6 +4234,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -4171,9 +4300,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -4229,6 +4361,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -4294,9 +4427,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"
@@ -4352,6 +4488,7 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                 </div>
               </div>
               <Controls
+                resetTile={[Function]}
                 rotateClockwise={[Function]}
                 rotateCounterClockwise={[Function]}
               >
@@ -4417,9 +4554,12 @@ exports[`The Dungeon Tile Builder app should match the snapshot 1`] = `
                       </div>
                     </RotateClockwise>
                   </Rotate>
-                  <Reset>
+                  <Reset
+                    onClick={[Function]}
+                  >
                     <div
                       className="pointer pa1"
+                      onClick={[Function]}
                     >
                       <svg
                         height="24"

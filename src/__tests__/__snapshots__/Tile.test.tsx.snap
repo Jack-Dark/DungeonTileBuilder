@@ -28,6 +28,7 @@ exports[`The Tile component should match the snapshot 1`] = `
     </div>
   </div>
   <Controls
+    resetTile={[Function]}
     rotateClockwise={[Function]}
     rotateCounterClockwise={[Function]}
   />

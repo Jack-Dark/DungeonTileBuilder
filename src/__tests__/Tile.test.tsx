@@ -68,4 +68,16 @@ describe('The Tile component', () => {
       expect(TileWrapper.state('degreesRotated')).toBe(90);
     });
   });
+  describe('when you click the Reset component', () => {
+    beforeEach(() => {
+      TileWrapper.setState({ degreesRotated: 90 });
+      const Controls = TileWrapper.find('Controls').shallow();
+      const Reset = Controls.find('Reset');
+      const resetTile = Reset.prop('onClick');
+      resetTile();
+    });
+    it('should reset the Tile to its default state', () => {
+      expect(TileWrapper.state('degreesRotated')).toBe(0);
+    });
+  });
 });
