@@ -1,16 +1,21 @@
 import React from 'react';
-// import logo from "./logo.svg";
 import Grid from './components/Grid';
+import { createCoords } from './utils';
 import './css/App.css';
+
+const gridSize = {
+  x: 7,
+  y: 5
+};
 
 export default class App extends React.PureComponent {
   state = {
-    size: {
-      x: 7,
-      y: 5
+    coordinates: {
+      x: createCoords(gridSize.x),
+      y: createCoords(gridSize.y, true)
     }
   };
   render(): React.ReactNode {
-    return <Grid type="square" size={this.state.size} />;
+    return <Grid type="square" coordinates={this.state.coordinates} />;
   }
 }

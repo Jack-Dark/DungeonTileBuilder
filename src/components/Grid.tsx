@@ -1,19 +1,14 @@
 import React from 'react';
 import GridRow from './GridRow';
-import { createCoords } from '../utils';
 
 export interface GridProps {
   type: 'square' | 'hex';
-  size: { x: number; y: number };
+  coordinates: { x: number[]; y: number[] };
 }
 
 export default class Grid extends React.PureComponent<GridProps> {
   render(): React.ReactNode {
-    const { type, size } = this.props;
-    const coordinates = {
-      x: createCoords(size.x),
-      y: createCoords(size.y, true)
-    };
+    const { type, coordinates } = this.props;
     return (
       <div className="flex flex-wrap items-center justify-center">
         {coordinates.y.map((y: number, index) => (
