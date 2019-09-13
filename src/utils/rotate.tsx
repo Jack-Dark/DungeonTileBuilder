@@ -1,4 +1,4 @@
-export const rotateTile = (
+export const rotate = (
   direction: 'clockwise' | 'counter-clockwise',
   degreesRotated = 0
 ) => {

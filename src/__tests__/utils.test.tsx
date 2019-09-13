@@ -1,4 +1,4 @@
-import { createCoords, rotateTile } from '../utils';
+import { createCoords, rotate } from '../utils';
 
 describe('The createCoords function', () => {
   const numOfCoords = 5;
@@ -40,15 +40,15 @@ describe('The createCoords function', () => {
   });
 });
 
-describe('The rotateTile function', () => {
+describe('The rotate function', () => {
   describe('rotating clockwise', () => {
     it('should should add 90 to the currentDegrees', () => {
-      expect(rotateTile('clockwise')).toBe(90);
+      expect(rotate('clockwise')).toBe(90);
     });
   });
   describe('rotating counter-clockwise', () => {
     it('should should subtract 90 from the currentDegrees', () => {
-      expect(rotateTile('counter-clockwise')).toBe(-90);
+      expect(rotate('counter-clockwise')).toBe(-90);
     });
   });
 });

@@ -49,8 +49,8 @@ describe('The Tile component', () => {
       const Controls = TileWrapper.find('Controls').shallow();
       const Rotate = Controls.find('Rotate').shallow();
       const RotateCounterClockwise = Rotate.find('RotateCounterClockwise');
-      const rotateTileCounterClockwise = RotateCounterClockwise.prop('onClick');
-      rotateTileCounterClockwise();
+      const rotateCounterClockwise = RotateCounterClockwise.prop('onClick');
+      rotateCounterClockwise();
     });
     it(`should update the Tile's degrees rotated value`, () => {
       expect(TileWrapper.state('degreesRotated')).toBe(-90);
@@ -61,8 +61,8 @@ describe('The Tile component', () => {
       const Controls = TileWrapper.find('Controls').shallow();
       const Rotate = Controls.find('Rotate').shallow();
       const RotateClockwise = Rotate.find('RotateClockwise');
-      const rotateTileClockwise = RotateClockwise.prop('onClick');
-      rotateTileClockwise();
+      const rotateClockwise = RotateClockwise.prop('onClick');
+      rotateClockwise();
     });
     it(`should update the Tile's degrees rotated value`, () => {
       expect(TileWrapper.state('degreesRotated')).toBe(90);

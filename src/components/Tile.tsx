@@ -2,7 +2,7 @@ import React from 'react';
 import GridSquare from './GridSquare';
 import GridHex from './GridHex';
 import Controls from './Controls';
-import { rotateTile } from '../utils';
+import { rotate } from '../utils';
 
 export interface TileProps {
   grid: string;
@@ -17,11 +17,11 @@ export default class Tile extends React.PureComponent<TileProps> {
   render(): React.ReactNode {
     const { degreesRotated } = this.state;
     const rotateClockwise = () => {
-      const newDegreesRotated = rotateTile('clockwise', degreesRotated);
+      const newDegreesRotated = rotate('clockwise', degreesRotated);
       this.setState({ degreesRotated: newDegreesRotated });
     };
     const rotateCounterClockwise = () => {
-      const newDegreesRotated = rotateTile('counter-clockwise', degreesRotated);
+      const newDegreesRotated = rotate('counter-clockwise', degreesRotated);
       this.setState({ degreesRotated: newDegreesRotated });
     };
     return (
