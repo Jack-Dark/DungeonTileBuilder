@@ -3,7 +3,7 @@ import Grid from './components/Grid';
 import { createCoords } from './utils';
 import './css/App.css';
 
-const gridSize = {
+const grid = {
   x: 7,
   y: 5
 };
@@ -11,8 +11,8 @@ const gridSize = {
 export default class App extends React.PureComponent {
   state = {
     coordinates: {
-      x: createCoords(gridSize.x),
-      y: createCoords(gridSize.y, true)
+      x: createCoords(grid.x),
+      y: createCoords(grid.y, true)
     }
   };
   render(): React.ReactNode {
