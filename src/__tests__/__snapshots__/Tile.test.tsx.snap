@@ -31,6 +31,14 @@ exports[`The Tile component should match the snapshot 1`] = `
     resetTile={[Function]}
     rotateClockwise={[Function]}
     rotateCounterClockwise={[Function]}
+    tileDetails={
+      Object {
+        "id": "1_x_1",
+        "rotation": 0,
+        "x": 1,
+        "y": 1,
+      }
+    }
   />
 </div>
 `;

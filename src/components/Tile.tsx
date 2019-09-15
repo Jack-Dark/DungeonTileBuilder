@@ -2,47 +2,45 @@ import React from 'react';
 import GridSquare from './GridSquare';
 import GridHex from './GridHex';
 import Controls from './Controls';
-import { rotate } from '../utils';
+import { tileType } from '../App';
 
 export interface TileProps {
-  grid: string;
-  x: number;
-  y: number;
+    grid: string;
+    rotateClockwise: Function;
+    rotateCounterClockwise: Function;
+    resetTile: Function;
+    tileDetails: tileType;
 }
 
 export default class Tile extends React.PureComponent<TileProps> {
-  state = {
-    degreesRotated: 0
-  };
-  render(): React.ReactNode {
-    const { degreesRotated } = this.state;
-    const rotateTile = (direction: 'clockwise' | 'counter-clockwise') => {
-      const newDegreesRotated = rotate(direction, degreesRotated);
-      this.setState({ degreesRotated: newDegreesRotated });
-    };
-    const rotateClockwise = () => rotateTile('clockwise');
-    const rotateCounterClockwise = () => rotateTile('counter-clockwise');
-    const resetTile = () => this.setState({ degreesRotated: 0 });
-    return (
-      <div className="relative">
-        {/square/i.test(this.props.grid) ? <GridSquare /> : <GridHex />}
-        <div
-          className="absolute z-1 w-100 h-100 top-0 left-0"
-          style={{ transform: `rotate(${degreesRotated}deg)` }}
-        >
-          <div
-            className="pa2 w-100"
-            style={{ color: 'white', backgroundColor: 'gray' }}
-          >
-            <b>Wall</b>
-          </div>
-        </div>
-        <Controls
-          rotateClockwise={rotateClockwise}
-          rotateCounterClockwise={rotateCounterClockwise}
-          resetTile={resetTile}
-        />
-      </div>
-    );
-  }
+    render(): React.ReactNode {
+        const {
+            tileDetails,
+            rotateClockwise,
+            rotateCounterClockwise,
+            resetTile
+        } = this.props;
+        return (
+            <div className="relative">
+                {/square/i.test(this.props.grid) ? <GridSquare /> : <GridHex />}
+                <div
+                    className="absolute z-1 w-100 h-100 top-0 left-0"
+                    style={{ transform: `rotate(${tileDetails.rotation}deg)` }}
+                >
+                    <div
+                        className="pa2 w-100"
+                        style={{ color: 'white', backgroundColor: 'gray' }}
+                    >
+                        <b>Wall</b>
+                    </div>
+                </div>
+                <Controls
+                    rotateClockwise={rotateClockwise}
+                    rotateCounterClockwise={rotateCounterClockwise}
+                    resetTile={resetTile}
+                    tileDetails={tileDetails}
+                />
+            </div>
+        );
+    }
 }
