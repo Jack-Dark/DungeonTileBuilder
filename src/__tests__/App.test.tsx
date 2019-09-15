@@ -24,6 +24,24 @@ describe('The Dungeon Tile Builder app', () => {
             expect(Dungeon.state().coordinates.x).toEqual([-2, -1, 1, 2, 3, 4]);
         });
     });
+    describe('when you click "+" icon on the ResizeGridLeft component', () => {
+        it('should update the coordinates.x values to add a new starting index', () => {
+            const resizeGridLeftPlus = Dungeon.find('ResizeGridLeft > div')
+                .first()
+                .prop('onClick');
+            resizeGridLeftPlus();
+            expect(Dungeon.state().coordinates.x).toEqual([
+                -4,
+                -3,
+                -2,
+                -1,
+                1,
+                2,
+                3,
+                4
+            ]);
+        });
+    });
     describe('the Tile component', () => {
         let Tile;
         let tileId: string;

@@ -89,11 +89,23 @@ export default class App extends React.PureComponent {
         // const xAxisPattern = /left|right/;
         // const axis = xAxisPattern.test(direction) ? 'x' : 'y';
 
-        // if (direction === 'left' && adjustment === '+') {
-        //     const lastCoordinate = oldAxisCoordinates[0];
-        //     oldCoordinates[axis] = oldAxisCoordinates.push(lastCoordinate - 1)
-        //     // .sort((a, b) => a - b);
-        // }
+        if (direction === 'left' && adjustment === '+') {
+            const coordinates = this.state.coordinates;
+            const x = coordinates.x[0] - 1;
+            const xCoordinates = coordinates.x;
+            const yCoordinates = coordinates.y;
+            let newXCoordinates = [x, ...xCoordinates];
+            // newXCoordinates = newXCoordinates.sort((a, b) => a - b);
+            const newTiles: any = { ...this.state.tiles };
+            yCoordinates.forEach(y => {
+                const id = `${x}_x_${y}`;
+                newTiles[id] = { id, x, y, rotation: 0 };
+            });
+            this.setState({
+                coordinates: { x: newXCoordinates, y: coordinates.y },
+                tiles: newTiles
+            });
+        }
         if (direction === 'left' && adjustment === '-') {
             const coordinates = this.state.coordinates;
             const xToRemove = coordinates.x[0];
