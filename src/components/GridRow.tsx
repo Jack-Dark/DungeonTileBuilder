@@ -14,7 +14,6 @@ export interface GridRowProps {
 
 export default class GridRow extends React.PureComponent<GridRowProps> {
     render(): React.ReactNode {
-        // console.log(this.props);
         const {
             xCoordinates,
             y,
