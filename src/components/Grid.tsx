@@ -46,7 +46,7 @@ export default class Grid extends React.PureComponent<GridProps> {
                     </React.Fragment>
                 ) : null}
                 <div className="flex flex-wrap items-center justify-center pa4">
-                    {yCoordinates.map((y, index) => (
+                    {yCoordinates.map(y => (
                         <GridRow
                             gridType={type}
                             y={y}
