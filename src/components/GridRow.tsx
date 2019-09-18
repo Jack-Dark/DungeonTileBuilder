@@ -24,7 +24,7 @@ export default class GridRow extends React.PureComponent<GridRowProps> {
             resetTile
         } = this.props;
         return (
-            <div className="flex justify-center w-100">
+            <div className="flex justify-center">
                 {xCoordinates.map(x => {
                     const tileId = createTileId(x, y);
                     return (

@@ -45,7 +45,7 @@ export default class Grid extends React.PureComponent<GridProps> {
                         <ResizeGridBottom resizeGrid={resizeGrid} />
                     </React.Fragment>
                 ) : null}
-                <div className="flex flex-wrap items-center justify-center pa4">
+                <div className="flex flex-column items-center justify-center pa4">
                     {yCoordinates.map(y => (
                         <GridRow
                             gridType={type}
