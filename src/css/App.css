@@ -4,6 +4,9 @@ body {
 * {
     box-sizing: border-box;
 }
+.fixed {
+    position: fixed;
+}
 .absolute {
     position: absolute;
 }
@@ -42,6 +45,9 @@ body {
 .z-2 {
     z-index: 2;
 }
+.z-3 {
+    z-index: 3;
+}
 .flex {
     display: flex;
 }
@@ -62,6 +68,12 @@ body {
 }
 .justify-between {
     justify-content: space-between;
+}
+.o-1 {
+    order: 1;
+}
+.o-2 {
+    order: 2;
 }
 .pa1 {
     padding: 0.25rem;
@@ -92,4 +104,12 @@ body {
 }
 .pointer {
     cursor: pointer;
+}
+.resize {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: 1px solid black;
+    line-height: 1;
+    text-align: center;
 }
