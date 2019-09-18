@@ -10,13 +10,13 @@ describe('The createCoords function', () => {
         expect(coords.length).toBe(numOfCoords);
     });
     it('should create an array of numbers with the correct values', () => {
-        expect(coords).toEqual([-2, -1, 1, 2, 3]);
+        expect(coords).toEqual([-2, -1, 0, 1, 2]);
     });
     describe('when the "qty" argument is an odd number', () => {
-        it('should create an array where the difference between the first and last index is 1', () => {
+        it('should create an array where the difference between the first and last index is 0', () => {
             const firstIndex = 0;
             const lastIndex = coords.length - 1;
-            expect(coords[firstIndex] + coords[lastIndex]).toBe(1);
+            expect(coords[firstIndex] + coords[lastIndex]).toBe(0);
         });
     });
     describe('when the "qty" argument is an even number', () => {
@@ -24,10 +24,10 @@ describe('The createCoords function', () => {
         beforeEach(() => {
             coords = createCoords(numOfCoords);
         });
-        it('should create an array where the difference between the first and last index is 0', () => {
+        it('should create an array where the difference between the first and last index is -1', () => {
             const firstIndex = 0;
             const lastIndex = coords.length - 1;
-            expect(coords[firstIndex] + coords[lastIndex]).toBe(0);
+            expect(coords[firstIndex] + coords[lastIndex]).toBe(-1);
         });
     });
     describe('when the "reverse" argument is true', () => {
@@ -35,7 +35,7 @@ describe('The createCoords function', () => {
             coords = createCoords(numOfCoords, true);
         });
         it('should reverse the order of the array values', () => {
-            expect(coords).toEqual([3, 2, 1, -1, -2]);
+            expect(coords).toEqual([2, 1, 0, -1, -2]);
         });
     });
 });

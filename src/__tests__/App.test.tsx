@@ -15,30 +15,122 @@ describe('The Dungeon Tile Builder app', () => {
     it('should match the snapshot', () => {
         expect(Dungeon).toMatchSnapshot();
     });
-    describe('when you click "-" icon on the ResizeGridLeft component', () => {
-        it('should update the coordinates.x values to remove the first index', () => {
-            const resizeGridLeftMinus = Dungeon.find('ResizeGridLeft > div')
+    describe('when you click "-" icon on the ResizeGridRight component', () => {
+        it('should update the coordinates.x values to remove the last index', () => {
+            const resizeGridLeftMinus = Dungeon.find('ResizeGridRight')
+                .find('div > div')
                 .last()
                 .prop('onClick');
             resizeGridLeftMinus();
-            expect(Dungeon.state().coordinates.x).toEqual([-2, -1, 1, 2, 3, 4]);
+            expect(Dungeon.state('coordinates').x).toEqual([
+                -2,
+                -1,
+                0,
+                1,
+                2,
+                3
+            ]);
         });
     });
-    describe('when you click "+" icon on the ResizeGridLeft component', () => {
-        it('should update the coordinates.x values to add a new starting index', () => {
-            const resizeGridLeftPlus = Dungeon.find('ResizeGridLeft > div')
+    describe('when you click "+" icon on the ResizeGridRight component', () => {
+        it.only('should update the coordinates.x values to add a new coordinate to the last index', () => {
+            const resizeGridLeftPlus = Dungeon.find('ResizeGridRight')
+                .find('div > div')
                 .first()
                 .prop('onClick');
             resizeGridLeftPlus();
-            expect(Dungeon.state().coordinates.x).toEqual([
-                -4,
+            expect(Dungeon.state('coordinates').x).toEqual([
                 -3,
                 -2,
                 -1,
+                0,
                 1,
                 2,
                 3,
                 4
+            ]);
+        });
+    });
+    describe('when you click "-" icon on the ResizeGridLeft component', () => {
+        it('should update the coordinates.x values to remove the first index', () => {
+            const resizeGridLeftMinus = Dungeon.find('ResizeGridLeft')
+                .find('div > div')
+                .last()
+                .prop('onClick');
+            resizeGridLeftMinus();
+            expect(Dungeon.state('coordinates').x).toEqual([-1, 0, 1, 2, 3, 4]);
+        });
+    });
+    describe('when you click "+" icon on the ResizeGridLeft component', () => {
+        it.only('should update the coordinates.x values to add a new starting index', () => {
+            const resizeGridLeftPlus = Dungeon.find('ResizeGridLeft')
+                .find('div > div')
+                .first()
+                .prop('onClick');
+            resizeGridLeftPlus();
+            expect(Dungeon.state('coordinates').x).toEqual([
+                -4,
+                -3,
+                -2,
+                -1,
+                0,
+                1,
+                2,
+                3
+            ]);
+        });
+    });
+    describe('when you click "-" icon on the ResizeGridTop component', () => {
+        it('should update the coordinates.y values to remove the first index', () => {
+            const resizeGridLeftMinus = Dungeon.find('ResizeGridTop')
+                .find('div > div')
+                .last()
+                .prop('onClick');
+            resizeGridLeftMinus();
+            expect(Dungeon.state('coordinates').y).toEqual([1, 0, -1, -2]);
+        });
+    });
+    describe('when you click "+" icon on the ResizeGridTop component', () => {
+        it.only('should update the coordinates.y values to add a new ending index', () => {
+            const resizeGridLeftPlus = Dungeon.find('ResizeGridTop')
+                .find('div > div')
+                .first()
+                .prop('onClick');
+            resizeGridLeftPlus();
+            expect(Dungeon.state('coordinates').y).toEqual([
+                3,
+                2,
+                1,
+                0,
+                -1,
+                -2
+            ]);
+        });
+    });
+    describe('when you click "-" icon on the ResizeGridBottom component', () => {
+        it('should update the coordinates.y values to remove the end index', () => {
+            const resizeGridLeftMinus = Dungeon.find('ResizeGridBottom')
+                .find('div > div')
+                .last()
+                .prop('onClick');
+            resizeGridLeftMinus();
+            expect(Dungeon.state('coordinates').y).toEqual([2, 1, 0, -1]);
+        });
+    });
+    describe('when you click "+" icon on the ResizeGridBottom component', () => {
+        it.only('should update the coordinates.y values to add a new starting index', () => {
+            const resizeGridLeftPlus = Dungeon.find('ResizeGridBottom')
+                .find('div > div')
+                .first()
+                .prop('onClick');
+            resizeGridLeftPlus();
+            expect(Dungeon.state('coordinates').y).toEqual([
+                2,
+                1,
+                0,
+                -1,
+                -2,
+                -3
             ]);
         });
     });
@@ -54,9 +146,9 @@ describe('The Dungeon Tile Builder app', () => {
                 const RotateCounterClockwise = Tile.find(
                     'RotateCounterClockwise'
                 );
-                const rotateCounterClockwise = RotateCounterClockwise.prop(
-                    'onClick'
-                );
+                const rotateCounterClockwise = RotateCounterClockwise.find(
+                    'div'
+                ).prop('onClick');
                 rotateCounterClockwise();
             });
             it(`should update the Tile's rotation value`, () => {
@@ -66,7 +158,9 @@ describe('The Dungeon Tile Builder app', () => {
         describe('when you click the RotateClockwise component', () => {
             beforeEach(() => {
                 const RotateClockwise = Tile.find('RotateClockwise');
-                const rotateClockwise = RotateClockwise.prop('onClick');
+                const rotateClockwise = RotateClockwise.find('div').prop(
+                    'onClick'
+                );
                 rotateClockwise();
             });
             it(`should update the Tile's rotation value`, () => {

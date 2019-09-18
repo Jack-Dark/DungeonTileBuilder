@@ -1,5 +1,8 @@
 import React from 'react';
 import GridRow from './GridRow';
+import ResizeGridTop from './Controls/ResizeGridTop';
+import ResizeGridRight from './Controls/ResizeGridRight';
+import ResizeGridBottom from './Controls/ResizeGridBottom';
 import ResizeGridLeft from './Controls/ResizeGridLeft';
 import { coordinatesType } from '../App';
 
@@ -24,15 +27,30 @@ export default class Grid extends React.PureComponent<GridProps> {
             rotateCounterClockwise,
             resetTile
         } = this.props;
+        const xCoordinates = coordinates.x;
+        const xCoordinatesExist = xCoordinates.length;
+        const yCoordinates = coordinates.y;
+        const yCoordinatesExist = yCoordinates.length;
         return (
             <React.Fragment>
-                <ResizeGridLeft resizeGrid={resizeGrid} />
-                <div className="flex flex-wrap items-center justify-center">
-                    {coordinates.y.map(y => (
+                {xCoordinatesExist ? (
+                    <React.Fragment>
+                        <ResizeGridRight resizeGrid={resizeGrid} />
+                        <ResizeGridLeft resizeGrid={resizeGrid} />
+                    </React.Fragment>
+                ) : null}
+                {yCoordinatesExist ? (
+                    <React.Fragment>
+                        <ResizeGridTop resizeGrid={resizeGrid} />
+                        <ResizeGridBottom resizeGrid={resizeGrid} />
+                    </React.Fragment>
+                ) : null}
+                <div className="flex flex-wrap items-center justify-center pa4">
+                    {yCoordinates.map((y, index) => (
                         <GridRow
                             gridType={type}
                             y={y}
-                            xCoordinates={coordinates.x}
+                            xCoordinates={xCoordinates}
                             tiles={tiles}
                             rotateClockwise={rotateClockwise}
                             rotateCounterClockwise={rotateCounterClockwise}

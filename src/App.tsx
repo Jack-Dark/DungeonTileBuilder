@@ -86,16 +86,123 @@ export default class App extends React.PureComponent {
         direction: 'top' | 'bottom' | 'left' | 'right',
         adjustment: '+' | '-'
     ) => {
-        // const xAxisPattern = /left|right/;
-        // const axis = xAxisPattern.test(direction) ? 'x' : 'y';
-
+        if (direction === 'top' && adjustment === '+') {
+            const coordinates = this.state.coordinates;
+            const y = coordinates.y[0] + 1;
+            const xCoordinates = coordinates.x;
+            const yCoordinates = coordinates.y;
+            let newYCoordinates = [y, ...yCoordinates];
+            const newTiles: any = { ...this.state.tiles };
+            xCoordinates.forEach(x => {
+                const id = `${x}_x_${y}`;
+                newTiles[id] = { id, x, y, rotation: 0 };
+            });
+            this.setState({
+                coordinates: { x: coordinates.x, y: newYCoordinates },
+                tiles: newTiles
+            });
+        }
+        if (direction === 'top' && adjustment === '-') {
+            const coordinates = this.state.coordinates;
+            const lastIndex = coordinates.y.length - 1;
+            const y = coordinates.y[0];
+            const xCoordinates = coordinates.x;
+            const yCoordinates = coordinates.y;
+            const newYCoordinates = yCoordinates.splice(1, lastIndex);
+            const newTiles: any = { ...this.state.tiles };
+            xCoordinates.forEach(x => {
+                const id = `${x}_x_${y}`;
+                delete newTiles[id];
+            });
+            this.setState({
+                coordinates: { x: coordinates.x, y: newYCoordinates },
+                tiles: newTiles
+            });
+        }
+        if (direction === 'right' && adjustment === '+') {
+            const coordinates = this.state.coordinates;
+            const lastX = coordinates.x.length - 1;
+            const x = coordinates.x[lastX] + 1;
+            const xCoordinates = coordinates.x;
+            const yCoordinates = coordinates.y;
+            let newXCoordinates = [...xCoordinates, x];
+            const newTiles: any = { ...this.state.tiles };
+            yCoordinates.forEach(y => {
+                const id = `${x}_x_${y}`;
+                newTiles[id] = { id, x, y, rotation: 0 };
+            });
+            this.setState({
+                coordinates: { x: newXCoordinates, y: coordinates.y },
+                tiles: newTiles
+            });
+        }
+        if (direction === 'right' && adjustment === '-') {
+            const coordinates = this.state.coordinates;
+            const lastX = coordinates.x.length - 1;
+            const x = coordinates.x[lastX];
+            const xCoordinates = coordinates.x;
+            const yCoordinates = coordinates.y;
+            const newXCoordinates = xCoordinates.splice(0, lastX);
+            const newTiles: any = { ...this.state.tiles };
+            yCoordinates.forEach(y => {
+                const id = `${x}_x_${y}`;
+                delete newTiles[id];
+            });
+            this.setState({
+                coordinates: { x: newXCoordinates, y: coordinates.y },
+                tiles: newTiles
+            });
+        }
+        if (direction === 'bottom' && adjustment === '+') {
+            const coordinates = this.state.coordinates;
+            const lastY = coordinates.y.length - 1;
+            const y = coordinates.y[lastY] - 1;
+            const xCoordinates = coordinates.x;
+            const yCoordinates = coordinates.y;
+            let newYCoordinates = [...yCoordinates, y];
+            const newTiles: any = {
+                ...this.state.tiles
+            };
+            xCoordinates.forEach(x => {
+                const id = `${x}_x_${y}`;
+                newTiles[id] = {
+                    id,
+                    x,
+                    y,
+                    rotation: 0
+                };
+            });
+            this.setState({
+                coordinates: {
+                    x: coordinates.x,
+                    y: newYCoordinates
+                },
+                tiles: newTiles
+            });
+        }
+        if (direction === 'bottom' && adjustment === '-') {
+            const coordinates = this.state.coordinates;
+            const lastIndex = coordinates.y.length - 1;
+            const y = coordinates.y[lastIndex];
+            const xCoordinates = coordinates.x;
+            const yCoordinates = coordinates.y;
+            const newYCoordinates = yCoordinates.splice(0, lastIndex);
+            const newTiles: any = { ...this.state.tiles };
+            xCoordinates.forEach(x => {
+                const id = `${x}_x_${y}`;
+                delete newTiles[id];
+            });
+            this.setState({
+                coordinates: { x: coordinates.x, y: newYCoordinates },
+                tiles: newTiles
+            });
+        }
         if (direction === 'left' && adjustment === '+') {
             const coordinates = this.state.coordinates;
             const x = coordinates.x[0] - 1;
             const xCoordinates = coordinates.x;
             const yCoordinates = coordinates.y;
             let newXCoordinates = [x, ...xCoordinates];
-            // newXCoordinates = newXCoordinates.sort((a, b) => a - b);
             const newTiles: any = { ...this.state.tiles };
             yCoordinates.forEach(y => {
                 const id = `${x}_x_${y}`;
@@ -108,14 +215,14 @@ export default class App extends React.PureComponent {
         }
         if (direction === 'left' && adjustment === '-') {
             const coordinates = this.state.coordinates;
-            const xToRemove = coordinates.x[0];
+            const x = coordinates.x[0];
             const xCoordinates = coordinates.x;
             const yCoordinates = coordinates.y;
             const newXCoordinates = xCoordinates.splice(1);
             const newTiles: any = { ...this.state.tiles };
             yCoordinates.forEach(y => {
-                const idToRemove = `${xToRemove}_x_${y}`;
-                delete newTiles[idToRemove];
+                const id = `${x}_x_${y}`;
+                delete newTiles[id];
             });
             this.setState({
                 coordinates: { x: newXCoordinates, y: coordinates.y },
